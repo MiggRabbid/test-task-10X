@@ -6,12 +6,16 @@
   "devDependencies": {
     "biome": "^0.3.3",
     "live-server": "^1.2.2",
-    "sass": "^1.94.2"
+    "sass": "^1.94.2",
+    "vite": "^7.2.6"
   },
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "live-server",
     "scss": "sass --watch src/styles/main.scss:styles/main.css",
-    "build:sass": "sass src/styles/scss:public/styles/css",
+    "build:scss": "sass src/styles/main.scss src/styles/main.css --no-source-map --style=compressed",
     "tree": "tree -I 'node_modules|.git|.gitignore|*.scss'",
     "lint": "biome lint",
     "format": "biome format"
