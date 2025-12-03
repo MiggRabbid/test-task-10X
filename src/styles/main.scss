@@ -1,0 +1,15 @@
+@use 'variables' as *;
+@use 'mixins';
+@use 'components';
+
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+}
+
+.courses {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "test-task-10x",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "biome": "^0.3.3",
+    "live-server": "^1.2.2",
+    "sass": "^1.94.2"
+  },
+  "scripts": {
+    "start": "live-server",
+    "scss": "sass --watch src/styles/main.scss:styles/main.css",
+    "build:sass": "sass src/styles/scss:public/styles/css",
+    "tree": "tree -I 'node_modules|.git|.gitignore|*.scss'",
+    "lint": "biome lint",
+    "format": "biome format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MiggRabbid/test-task-10X.git"
+  },
+  "keywords": [],
+  "author": "MiggRabbid",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MiggRabbid/test-task-10X/issues"
+  },
+  "homepage": "https://github.com/MiggRabbid/test-task-10X#readme"
+}

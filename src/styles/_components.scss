@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.courses__title {
+    font-size: 2rem;
+    color: $font-color;
+    margin-bottom: 20px;
+}
+
+.courses__search-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

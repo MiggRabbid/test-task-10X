@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Online Courses</title>
+
+    <link rel="icon" href="public/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <section class="courses">
+      <h1 class="courses__title">
+        Enjoy your studying! <br />
+        Our online courses
+      </h1>
+
+      <!-- Filters -->
+      <div class="courses__filters" id="coursesFilters"></div>
+
+      <!-- Search bar -->
+      <div class="courses__search">
+        <input
+          type="text"
+          id="search"
+          class="courses__search-input"
+          placeholder="Search courses..."
+        />
+      </div>
+
+      <!-- Courses Grid -->
+      <div class="courses__grid" id="coursesGrid"></div>
+
+      <!-- Load More -->
+      <button class="courses__load-more" id="loadMore">Load more</button>
+    </section>
+
+    <script type="module" src="src/scripts/courses.js"></script>
+    <script type="module" src="src/scripts/search.js"></script>
+    <script type="module" src="src/scripts/filter.js"></script>
+  </body>
+</html>
