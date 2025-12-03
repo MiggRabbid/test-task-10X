@@ -1,0 +1,21 @@
+/**
+ * Медиа запросы
+ */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px !important;
+  }
+
+  .courses {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .filters {
+    flex-direction: column-reverse !important;
+    gap: 20px !important;
+    .filters__search {
+      margin-left: auto !important;
+    }
+  }
+}

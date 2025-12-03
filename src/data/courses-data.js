@@ -2,7 +2,7 @@ export const CATEGORY = {
   All: 'All',
   Marketing: 'Marketing',
   Management: 'Management',
-  HR_and_Recruiting: 'HR & Recruiting',
+  Recruiting: 'HR & Recruiting',
   Design: 'Design',
   Development: 'Development',
 };
@@ -24,7 +24,7 @@ export const coursesData = [
   },
   {
     title: 'HR Management and Analytics',
-    category: CATEGORY.HR_and_Recruiting,
+    category: CATEGORY.Recruiting,
     price: '$200',
     author: 'Leslie Alexander Li',
     image: 'course3.png',
@@ -59,7 +59,7 @@ export const coursesData = [
   },
   {
     title: 'Human Resources - Selection and Recruitment',
-    category: CATEGORY.HR_and_Recruiting,
+    category: CATEGORY.Recruiting,
     price: '$150',
     author: 'Kathryn Murphy',
     image: 'course8.png',

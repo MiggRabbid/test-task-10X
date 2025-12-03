@@ -1,7 +1,16 @@
-
-$danger-color: #FF4242;
+// Цвета
+$danger-color: #ff4242;
 $secondary-color: #424551;
-$font-color: #1E212C;
-$font-color-secondary: #9A9CA5;
-$background-color: #FFFFFF;
-$font-family: Arial, sans-serif;
+$border-color: #e5e8ed;
+$font-color: #1e212c;
+$font-color-secondary: #9a9ca5;
+$background-color: #ffffff;
+
+// Тени для карточек
+$shadow-card1: 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+$shadow-card2: 0px 12px 10px -6px rgba(154, 156, 165, 0.04);
+$shadow-card3: 0px 30px 24px -10px rgba(154, 156, 165, 0.05);
+$shadow-card4: 0px 80px 80px -20px rgba(52, 46, 46, 0.08);
+
+// Скругления
+$border-radius-small: 4px;

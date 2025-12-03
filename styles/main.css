@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/**
+ * Медиа запросы
+ */
+@media (max-width: 768px) {
+  body {
+    padding: 0 20px !important;
+  }
+  .courses {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .filters {
+    flex-direction: column-reverse !important;
+    gap: 20px !important;
+  }
+  .filters .filters__search {
+    margin-left: auto !important;
+  }
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  src: url("/public/fonts/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  src: url("/public/fonts/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: url("/public/fonts/Lato-Black.ttf") format("truetype");
+}
+/**
+ * Хеадер
+ */
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  flex-direction: column;
+  margin-bottom: 85px;
+}
+.header__slogan {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.header__title {
+  margin: 0;
+  font-size: 46px;
+  text-align: center;
+  line-height: 130%;
+  font-weight: 900;
+}
+.header {
+  /**
+  * Фильтры
+  */
+}
+.header .filters {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 12px;
+  row-gap: 4px;
+}
+.header .filters__btns {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 4px;
+}
+.header .filter-btn {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #9a9ca5;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: color 0.3s ease-in-out;
+}
+.header .filter-btn:hover {
+  color: #ff4242;
+}
+.header .filter-btn--active {
+  color: #ff4242;
+  border-color: #ff4242;
+}
+.header .filter-btn__text {
+  position: relative;
+}
+.header .filter-btn__counter {
+  font-size: 10px;
+}
+.header {
+  /**
+  * Поиск
+  */
+}
+.header .filters__search {
+  position: relative;
+  width: fit-content;
+}
+.header .filters__search-icon {
+  width: 16px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.header .filters__search-input {
+  min-width: 200px;
+  max-width: 300px;
+  padding: 14px 16px;
+  padding-right: 37px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.header .filters__search-input::placeholder {
+  color: #9a9ca5;
+}
+.header .filters__search-input:focus {
+  outline-color: #9a9ca5;
+}
+
+/**
+ * Курсы
+ */
+.courses__grid {
+  width: 100%;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 30px;
+}
+.courses__load-more {
+  margin: 80px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #424551;
+  cursor: default;
+}
+.courses__load-more img {
+  width: 20px;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.courses .course-card {
+  border-radius: 4px;
+  border: 1px solid #e5e8ed;
+  box-shadow: 0px 30px 24px -10px rgba(154, 156, 165, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeInUp 0.2s ease-out forwards;
+}
+.courses .course-card:hover {
+  box-shadow: 0px 80px 80px -20px rgba(52, 46, 46, 0.08);
+}
+.courses .course-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8/5;
+  flex-shrink: 1;
+  object-fit: cover;
+  display: block;
+}
+.courses .course-card__content {
+  height: fit-content;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+}
+.courses .course-card__title {
+  font-size: 20px;
+  font-weight: 700;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.courses .course-card__category {
+  padding: 1px 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.courses .course-card__footer {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+}
+.courses .course-card__price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff4242;
+}
+.courses .course-card__divider {
+  background-color: #9a9ca5;
+  height: 16px;
+  width: 1px;
+}
+.courses .course-card__author {
+  font-size: 18px;
+  font-weight: 400;
+  color: #9a9ca5;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #1e212c;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1230px;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  gap: 8px;
+  flex-direction: column;
+  padding-top: 44px;
+}
+
+.courses {
+  max-width: 1230px;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=main.css.map */
