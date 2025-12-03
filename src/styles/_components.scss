@@ -150,23 +150,12 @@
     }
   }
 
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .course-card {
     border-radius: $border-radius-small;
     border: 1px solid $border-color;
     box-shadow: $shadow-card3;
     overflow: hidden;
     cursor: pointer;
-    opacity: 0;
-    animation: fadeInUp 0.2s ease-out forwards;
 
     &:hover {
       box-shadow: $shadow-card4;

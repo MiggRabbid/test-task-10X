@@ -17,16 +17,20 @@ const searchInput = document.getElementById('search');
 
 // Основная логика поиска
 const handleSearch = () => {
+  const filterButton = document.getElementById('active-btn');
+  const activeCategory = filterButton.dataset.category;
+
   const searchTerm = searchInput.value.toLowerCase().trim();
 
+  const targetCourses = activeCategory === CATEGORY.All
+    ? state.courses 
+    : state.courses.filter((course) => course.category === activeCategory);
+
   if (searchTerm.length === 0) {
-    state.filteredCourses =
-      state.activeCategory === CATEGORY.All
-        ? state.courses
-        : state.courses.filter((course) => course.category === state.activeCategory);
-      renderCourses(state.filteredCourses);
+    state.filteredCourses = targetCourses;
+    renderCourses(targetCourses);
   } else {
-    const updateCourses = state.filteredCourses.filter((course) =>
+    const updateCourses = targetCourses.filter((course) =>
       course.title.toLowerCase().includes(searchTerm)
     );
 
@@ -34,10 +38,11 @@ const handleSearch = () => {
 
     if (!isCompareArrays) {
       state.filteredCourses = updateCourses
-      renderCourses(state.filteredCourses);
+      renderCourses(updateCourses);
     }
   }
 
+      console.groupEnd();
 };
 
 // Применение дебаунса с задержкой в 300 мс

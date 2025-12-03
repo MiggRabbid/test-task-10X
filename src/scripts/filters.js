@@ -8,10 +8,12 @@ const coursesFilters = document.getElementById('coursesFilters');
 
 export const renderFilters = (filters) => {
   coursesFilters.innerHTML = '';
-  filters.forEach((filter, index) => {
+  filters.forEach((filter) => {
     if (state.courses.filter) {
       const btn = document.createElement('button');
+      
       btn.classList.add('filter-btn');
+      btn.setAttribute('id', 'active-btn');
 
       if (filter === CATEGORY.All) {
         btn.classList.add('filter-btn--active');
@@ -49,9 +51,11 @@ filterButtons.forEach((button) => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     filterButtons.forEach((btn) => {
       btn.classList.remove('filter-btn--active');
-    });
+      btn.removeAttribute('id');
+    });w
 
     button.classList.add('filter-btn--active');
+    button.setAttribute('id', 'active-btn');
 
     clearSearchInput();
     renderCourses(state.filteredCourses);
