@@ -26,7 +26,7 @@ export const renderCourses = (courses) => {
 
     const img = document.createElement('img');
     img.classList.add('course-card__image');
-    img.src = `public/assets/course-authors/${course.image}`;
+    img.src = `assets/course-authors/${course.image}`;
     img.alt = course.title;
 
     const content = document.createElement('div');
