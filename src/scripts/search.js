@@ -24,13 +24,20 @@ const handleSearch = () => {
       state.activeCategory === CATEGORY.All
         ? state.courses
         : state.courses.filter((course) => course.category === state.activeCategory);
+      renderCourses(state.filteredCourses);
   } else {
-    state.filteredCourses = state.filteredCourses.filter((course) =>
+    const updateCourses = state.filteredCourses.filter((course) =>
       course.title.toLowerCase().includes(searchTerm)
     );
+
+    const isCompareArrays = compareArraysByTitle(updateCourses, state.filteredCourses);
+
+    if (!isCompareArrays) {
+      state.filteredCourses = updateCourses
+      renderCourses(state.filteredCourses);
+    }
   }
 
-  renderCourses(state.filteredCourses);
 };
 
 // Применение дебаунса с задержкой в 300 мс
@@ -40,3 +47,14 @@ searchInput.addEventListener('input', debounce(handleSearch, 200));
 export const clearSearchInput = () => {
   searchInput.value = '';
 };
+
+// Проверка равенства массивов по title
+const  compareArraysByTitle = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return false;
+
+
+  arr1.sort((a, b) => a.title.localeCompare(b.title));
+  arr2.sort((a, b) => a.title.localeCompare(b.title));
+
+  return arr1.every((item, index) => item.title === arr2[index].title);
+}
