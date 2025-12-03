@@ -105,7 +105,9 @@
   position: relative;
 }
 .header .filter-btn__counter {
+  height: fit-content;
   font-size: 10px;
+  line-height: 1;
 }
 .header {
   /**

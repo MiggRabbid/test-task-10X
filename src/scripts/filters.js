@@ -43,19 +43,25 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const category = button.dataset.category;
+
     state.filteredCourses =
       category === 'All'
         ? state.courses
         : state.courses.filter((course) => course.category === CATEGORY[category]) ?? [];
 
     const filterButtons = document.querySelectorAll('.filter-btn');
+
     filterButtons.forEach((btn) => {
       btn.classList.remove('filter-btn--active');
       btn.removeAttribute('id');
-    });w
+    });
+
 
     button.classList.add('filter-btn--active');
     button.setAttribute('id', 'active-btn');
+
+    
+    console.log(button);
 
     clearSearchInput();
     renderCourses(state.filteredCourses);

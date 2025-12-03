@@ -79,7 +79,9 @@
     }
 
     &__counter {
+      height: fit-content;
       font-size: $font-size-10;
+      line-height: 1;
     }
   }
 
